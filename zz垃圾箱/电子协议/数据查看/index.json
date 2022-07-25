@@ -1,0 +1,89 @@
+[
+    {
+        "createDate": "2020-06-05 00:00:00",
+        "groupCode": "PAY_INFO_BANK_REGION_19",
+        "groupName": "无锡收款银行",
+        "newEntity": true,
+        "paramCode": "PAY_INFO_BANK_REGION_19_1",
+        "paramName": "中国农业银行股份有限公司无锡永乐支行",
+        "paramValue": "1",
+        "sortIdx": 1,
+        "status": "1",
+        "statusCd": "1",
+        "updateDate": "2020-06-05 00:00:00"
+    }
+]
+
+{
+    "randomstr": 16399595,
+    "appId": "1",
+    "abilityCode": "H5AppDataDictQry",
+    "secret": "U2FsdGVkX19vH34SUWbjy0q2gM9D7jBj",
+    "transactionId": "12019092513420010000001",
+    "timestamp": 1658460005654,
+    "token": "46a9c9fee9a84077aec5adf2f8bee4cf",
+    "body": "{\"groupCode\":\"PAY_INFO_BANK_REGION_19\"}",
+    "sign": "f285c2a0fe76a4c9d01bf07189d8a973a0c0b6d7f8a83267fdae771a14eba165"
+}
+//   开户银行下拉
+[
+    {
+        "createDate": "2020-06-05 00:00:00",
+        "groupCode": "PAY_INFO_ACCOUNT_NAME_19_1",
+        "groupName": "无锡收款名称账户",
+        "newEntity": true,
+        "paramCode": "PAY_INFO_ACCOUNT_NAME_19_1_1",
+        "paramName": "中国移动通信集团江苏有限公司无锡分公司",
+        "paramValue": "1_1",
+        "sortIdx": 1,
+        "status": "1",
+        "statusCd": "1",
+        "updateDate": "2020-06-05 00:00:00"
+    },
+    {
+        "createDate": "2020-06-05 00:00:00",
+        "groupCode": "PAY_INFO_ACCOUNT_NAME_19_1",
+        "groupName": "无锡收款名称账户",
+        "newEntity": true,
+        "paramCode": "PAY_INFO_ACCOUNT_NAME_19_1_2",
+        "paramName": "中国移动通信集团江苏有限公司",
+        "paramValue": "1_2",
+        "sortIdx": 2,
+        "status": "1",
+        "statusCd": "1",
+        "updateDate": "2020-06-05 00:00:00"
+    }
+]
+
+{
+    "randomstr": 51969901,
+    "appId": "1",
+    "abilityCode": "H5AppDataDictQry",
+    "secret": "U2FsdGVkX19vH34SUWbjy0q2gM9D7jBj",
+    "transactionId": "12019092513420010000001",
+    "timestamp": 1658460006332,
+    "token": "46a9c9fee9a84077aec5adf2f8bee4cf",
+    "body": "{\"groupCode\":\"PAY_INFO_ACCOUNT_NAME_19_1\"}",
+    "sign": "37a05f47e477dc1a72073546d588e6466b1537ddf4798ed86b669a1af3588b31"
+}
+
+//账户下拉
+{
+    "receiptOpenAccount": "10632601040011349"
+}
+
+{
+    "randomstr": 1313417,
+    "appId": "1",
+    "abilityCode": "H5AppBankAcctQry",
+    "secret": "U2FsdGVkX19vH34SUWbjy0q2gM9D7jBj",
+    "transactionId": "12019092513420010000001",
+    "timestamp": 1658460006959,
+    "token": "46a9c9fee9a84077aec5adf2f8bee4cf",
+    "body": "{\"cfId\":\"PAY_INFO_ACCOUNT_REGION_19_1_1\"}",
+    "sign": "3ed06b57e869cf26e62ca0bddbacaaba1e273573d8c6aa621c3fa5449c373ace"
+}
+
+//账号信息
+
+DzxyIntfInvoke

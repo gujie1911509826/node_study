@@ -1,0 +1,15 @@
+[
+    {
+        "createDate": "2020-06-05 00:00:00",
+        "groupCode": "PAY_INFO_BANK_REGION_19",
+        "groupName": "无锡收款银行",
+        "newEntity": true,
+        "paramCode": "PAY_INFO_BANK_REGION_19_1",
+        "paramName": "中国农业银行股份有限公司无锡永乐支行",
+        "paramValue": "1",
+        "sortIdx": 1,
+        "status": "1",
+        "statusCd": "1",
+        "updateDate": "2020-06-05 00:00:00"
+    }
+]
