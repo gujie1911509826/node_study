@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        position: relative;
+        overflow: hidden;
+        margin: 200px auto;
+        width: 600px;
+        height: 400px;
+    }
+    
+    .img {
+        width: 3000px;
+        height: 400px;
+    }
+    
+    img {
+        float: left;
+        width: 600px;
+        height: 400px;
+    }
+    
+    .btn {
+        position: absolute;
+        top: 350px;
+        left: 245px;
+        width: 110px;
+        height: 20px;
+    }
+    
+    .dian {
+        float: left;
+        margin: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+    }
+    
+    .left,
+    .right {
+        display: none;
+        box-sizing: border-box;
+        position: absolute;
+        top: 150px;
+        width: 50px;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.521);
+        font-size: 40px;
+        line-height: 100px;
+        color: #fff;
+    }
+    
+    .box:hover .left,
+    .box:hover .right {
+        display: block;
+    }
+    
+    .left {
+        padding-left: 10px;
+        left: 0;
+    }
+    
+    .right {
+        padding-right: 10px;
+        text-align: right;
+        right: 0;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="img">
+            <img src="./img/1.jpeg" alt="">
+            <img src="./img/2.jpeg" alt="">
+            <img src="./img/3.jpeg" alt="">
+            <img src="./img/4.jpeg" alt="">
+            <img src="./img/5.jpeg" alt="">
+        </div>
+
+        <div class="btn">
+            <span class="dian"></span>
+            <span class="dian"></span>
+            <span class="dian"></span>
+            <span class="dian"></span>
+            <span class="dian"></span>
+        </div>
+
+        <div class="left">&lt; </div>
+        <div class="right">&gt;</div>
+</div>
+<script>
+    var btn = document.getElementsByClassName('btn')[0];
+    var imgBox = document.getElementsByClassName('img')[0];
+    var imgs = imgBox.getElementsByTagName('img');
+    var btnChild = document.getElementsByClassName('dian');
+
+    var k = 0;
+    // 向按钮添加自定义属性
+    for (var i = 0; i < btnChild.length; i++) {
+        btnChild[i].dataset.num = i * 600;
+    }
+    // 默认为 第一张图片，第一个按钮为白色
+    btnChild[0].style.background = 'rgba(255, 255, 255, 0.8)';
+
+    // 点击按钮切换图片，按钮变色
+    btn.onclick = function(e) {
+
+        if (e.target.nodeName === 'SPAN') {
+            // 先让所有按钮为默认颜色
+            for (var i = 0; i < btnChild.length; i++) {
+                btnChild[i].style.background = 'rgba(255, 255, 255, 0.4)';
+            }
+            // 点击的按钮变色
+            k = +e.target.dataset.num;
+            console.log(k);
+            btnChild[k / 600].style.background = 'rgba(255, 255, 255, 0.8)';
+            // 切换图片
+            imgBox.style.transform = `translateX(-${e.target.dataset.num}px)`;
+        }
+    }
+
+    // 获取图片长度
+    // var imgWidth = +getComputedStyle(imgs[0]).width.slice(0, -2);
+    var imgWidth = imgs[0].offsetWidth;
+
+
+    // 定时器 移动图片
+    var interval1 = setInterval(move, 1000);
+    var interval;
+
+
+
+    // 函数 移动图片，改变按钮
+    function move() {
+        k += imgWidth;
+        if (k === imgWidth * imgs.length) {
+            k = 0;
+        }
+        // 移动图片 
+        imgBox.style.transform = `translateX(-${k}px)`;
+        // 改变按钮颜色
+        for (var i = 0; i < btnChild.length; i++) {
+            btnChild[i].style.background = 'rgba(255, 255, 255, 0.4)';
+        }
+
+        btnChild[k / 600].style.background = 'rgba(255, 255, 255, 0.8)';
+
+
+    }
+
+
+    // 鼠标移动到图片上 删除定时器
+    var box = document.getElementsByClassName('box')[0];
+    box.onmouseover = function() {
+        clearInterval(interval1);
+        clearInterval(interval);
+    }
+
+    // 鼠标移出 启动定时器
+    box.onmouseout = function() {
+        interval = setInterval(move, 1000);
+    }
+
+    var leftBtn = document.getElementsByClassName('left')[0];
+    var rightBtn = document.getElementsByClassName('right')[0];
+
+    rightBtn.onclick = function() {
+
+        k += imgWidth;
+        if (k === imgWidth * imgs.length) {
+            k = 0;
+        }
+        // 移动图片 
+        imgBox.style.transform = `translateX(-${k}px)`;
+        // 改变按钮颜色
+        for (var i = 0; i < btnChild.length; i++) {
+            btnChild[i].style.background = 'rgba(255, 255, 255, 0.4)';
+        }
+
+        btnChild[k / 600].style.background = 'rgba(255, 255, 255, 0.8)';
+
+
+    }
+    leftBtn.onclick = function() {
+        k -= imgWidth;
+        if (k < 0) {
+            k = imgWidth * (imgs.length - 1);
+        }
+        imgBox.style.transform = `translateX(-${k}px)`;
+        // 改变按钮颜色
+        for (var i = 0; i < btnChild.length; i++) {
+            btnChild[i].style.background = 'rgba(255, 255, 255, 0.4)';
+        }
+
+        btnChild[k / 600].style.background = 'rgba(255, 255, 255, 0.8)';
+
+
+    }
+</script>
+</body>
+</html>

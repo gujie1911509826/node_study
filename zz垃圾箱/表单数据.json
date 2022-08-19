@@ -1,0 +1,73 @@
+{
+    "xxtt_form": {
+        "smsTitle": "10657003",
+        "smsPort": "106570031998608"
+    },
+    "custInfo": {
+        "cust_name": "重庆曹操有限公司",
+        "attention": "",
+        "tel": "15251847816",
+        "ae_id": "1999073",
+        "chinese_name": "李平",
+        "ae_tel": "15803433335"
+    },
+    "hdc_busi_info": {
+        "billingPeriod": "1",
+        "guaranAmount_js": "22",
+        "contractAmount_js": "33",
+        "busiType_js": "开通",
+        "termBusiness_js": "12",
+        "autoDelay_js": "12",
+        "jsContactZx": "联系人",
+        "lxrphone": "15251847816",
+        "contactAEmail_js": "联系人联系人",
+        "managerName": "李平",
+        "jsKhjllxdh": "15803433335",
+        "groupContactName": "联系人联系人联系人",
+        "groupContactTel": "15251847816",
+        "disputeSettlement_js": "1",
+        "band_ramark": "联系人联系人联系人联系人联系人"
+    },
+    "receiptInfo": {
+        "receiptOpenAccount": "1",
+        "receiptOpenAccountName": "1_1",
+        "receiptOpenBank": "10632601040011349"
+    },
+    "zhuanxinaxinxi": {
+        "look_prodType": "0",
+        "look_prodGrade": "0_0",
+        "look_price": "0.5",
+        "look_priceUnit": "元/条",
+        "dz_effDate": "0"
+    },
+    "order_info": {
+        "ddbzxx": "短信信息提醒.html",
+        "sfdxtx": "0",
+        "ddxxsfjj": "0",
+        "isPrintBusiAuthorize": "0"
+    },
+    "approveInfo": {
+        "approvalFlag": "Y",
+        "approvalReason": "短信信息提醒.html短信信息提醒.html短信信息提醒.html短信信息提醒.html",
+        "mianshenpi": [
+            {
+                "name": "s2.png",
+                "data": "data:image/png;base64,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",
+                "size": 2419
+            }
+        ]
+    },
+    "uploadInfo": {},
+    "invoiceInfo": {
+        "invoice_type": "1",
+        "custfullname": "苏州再灵物联网科技有限公司",
+        "custaxpayernumber": "91320594MA20NWWH66"
+    },
+    "payInfo": {
+        "paymentMethodType": "1",
+        "paymentMethod": "1",
+        "rechargeAmount": "111",
+        "accountBalance": "222",
+        "paymentCycle": "4"
+    }
+}

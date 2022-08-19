@@ -1,0 +1,168 @@
+{
+    "permission": {},
+    "invoice_info_data": {},
+    "invoice_info_dataFilter": {
+        "primaryValue": ""
+    },
+    "receipt_info": {},
+    "receipt_infoFilter": {
+        "primaryValue": ""
+    },
+    "deferred_filing": {},
+    "deferred_filingFilter": {
+        "primaryValue": ""
+    },
+    "query_prod_list": {
+        "list": [
+            {
+                "lcdp_page_path": "767576389505118208",
+                "prod_id": 100009,
+                "prod_name": "和洞察"
+            }
+        ],
+        "firstProdName": "和洞察"
+    },
+    "query_prod_listFilter": {},
+    "payment_method_info": {},
+    "payment_method_infoFilter": {
+        "primaryValue": ""
+    },
+    "get_sessionFilter": {},
+    "receipt_info_select": {},
+    "receipt_info_selectFilter": {
+        "primaryValue": ""
+    },
+    "basicSubmit": {
+        "submit": false
+    },
+    "submitBusiness": {
+        "submit": false
+    },
+    "get_session": {
+        "lcdp_auth_str": "SESSION=7c059c68-d776-42ab-9abc-21b51027a74d"
+    },
+    "cust_info": {},
+    "cust_infoFilter": {},
+    "account_info": {
+        "account_type": "业务账户",
+        "account_id": "2370932253225797",
+        "account_description": "",
+        "a_account_srl_id": "",
+        "account_name": "互联网专线子业务201805十二圩3000-2",
+        "a_account_last_update_time": "20180529220530",
+        "account_status": "有效",
+        "account_payment_type": "后付费"
+    },
+    "account_infoFilter": {},
+    "assemble_cust_info": {
+        "custName": "重庆曹操有限公司",
+        "custCode": "51034732093",
+        "cust_name": "重庆曹操有限公司",
+        "addr": "11111111222",
+        "tel": "15251847816",
+        "customtrade": "未确定",
+        "aeId": "1999073",
+        "aeName": "李平",
+        "aeTel": "15803433335",
+        "crmCustId": "1490000004715347",
+        "certtype": "43232342234",
+        "certno": "43232342234",
+        "aeEmail": "13813875924@139.com",
+        "is_arrears": "是",
+        "is_other_net": "是",
+        "is_vnet_user": "是",
+        "attention": ""
+    },
+    "assemble_cust_infoFilter": {},
+    "assemble_account_info": {
+        "account_type": "业务账户",
+        "account_id": "2370932253225797",
+        "account_description": "",
+        "a_account_srl_id": "",
+        "account_name": "互联网专线子业务201805十二圩3000-2",
+        "a_account_last_update_time": "20180529220530",
+        "account_status": "有效",
+        "account_payment_type": "后付费"
+    },
+    "assemble_account_infoFilter": {},
+    "assemble_payment_info": {},
+    "assemble_payment_infoFilter": {},
+    "is_need_prove": {},
+    "is_need_proveFilter": {},
+    "header_info": {
+        "lcdp_auth_str": "SESSION=7c059c68-d776-42ab-9abc-21b51027a74d",
+        "lcdp_token_str": "771e4ae6-c49b-4d13-8872-4df63a74658b"
+    },
+    "header_infoFilter": {},
+    "cust_btn_visible": {
+        "visible": true
+    },
+    "cust_btn_visibleFilter": {},
+    "step": {
+        "index": 1
+    },
+    "stepFilter": {},
+    "basicSubmitFilter": {},
+    "isCreateGrpAccount": {
+        "isCreateGrpAccount": true
+    },
+    "isCreateGrpAccountFilter": {},
+    "submitBusinessFilter": {},
+    "message_formData": {},
+    "message_formDataFilter": {},
+    "account_arr1": [
+        {
+            "createDate": "2020-06-05 00:00:00",
+            "groupCode": "PAY_INFO_BANK_REGION_19",
+            "groupName": "无锡收款银行",
+            "newEntity": true,
+            "paramCode": "PAY_INFO_BANK_REGION_19_1",
+            "paramName": "中国农业银行股份有限公司无锡永乐支行",
+            "paramValue": "1",
+            "sortIdx": 1,
+            "status": "1",
+            "statusCd": "1",
+            "updateDate": "2020-06-05 00:00:00"
+        }
+    ],
+    "account_arr1Filter": {},
+    "account_arr2": [
+        {
+            "createDate": "2020-06-05 00:00:00",
+            "groupCode": "PAY_INFO_ACCOUNT_NAME_19_1",
+            "groupName": "无锡收款名称账户",
+            "newEntity": true,
+            "paramCode": "PAY_INFO_ACCOUNT_NAME_19_1_1",
+            "paramName": "中国移动通信集团江苏有限公司无锡分公司",
+            "paramValue": "1_1",
+            "sortIdx": 1,
+            "status": "1",
+            "statusCd": "1",
+            "updateDate": "2020-06-05 00:00:00"
+        },
+        {
+            "createDate": "2020-06-05 00:00:00",
+            "groupCode": "PAY_INFO_ACCOUNT_NAME_19_1",
+            "groupName": "无锡收款名称账户",
+            "newEntity": true,
+            "paramCode": "PAY_INFO_ACCOUNT_NAME_19_1_2",
+            "paramName": "中国移动通信集团江苏有限公司",
+            "paramValue": "1_2",
+            "sortIdx": 2,
+            "status": "1",
+            "statusCd": "1",
+            "updateDate": "2020-06-05 00:00:00"
+        }
+    ],
+    "account_arr2Filter": {},
+    "resultObject": {
+        "custaddress": "苏州工业园区苏虹东路155号方正智谷1幢708室",
+        "custaxpayernumber": "91320594MA20NWWH66",
+        "custbankacccout": "1102151509100012997",
+        "custbankname": "中国工商银行股份有限公司苏州金门路支行",
+        "custfullname": "苏州再灵物联网科技有限公司",
+        "custphone": "13906208356",
+        "groupid": "51235691359"
+    },
+    "resultObjectFilter": {}
+}
