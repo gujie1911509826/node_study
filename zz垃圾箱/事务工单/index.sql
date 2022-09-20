@@ -138,7 +138,8 @@ FROM
       timeFlag1
   ) aa
 WHERE
-  1 = 1 < if test = "month!='' and  month!=null " >
+  1 = 1 
+  < if test = "month!='' and  month!=null " >
   AND MONTHa >= #{month}
   < / if > < if test = "month1!='' and  month1!=null " >
   AND MONTHa <= #{month1}

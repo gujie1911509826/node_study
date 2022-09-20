@@ -1,0 +1,31 @@
+var arr = [
+    {
+        "fileInfo": "[{\"fileId\":\"32215\",\"fileName\":\"6666.png\",\"url\":\"lcdp-app-platform-dev/67bcc715-0a07-4cd4-9f10-1c7137d74d20.png\"}]",
+        "fileType": 1
+    },
+    {
+        "fileInfo": "[{\"fileId\":\"32015\",\"fileName\":\"灵犀开发认证知识点汇总 (5).docx\",\"url\":\"lcdp-app-platform-dev/53bfdad4-d907-457c-ade0-e76603cd3ac0.docx\"}]",
+        "fileType": 2
+    },
+    {
+        "fileInfo": "[{\"fileId\":\"32114\",\"fileName\":\"灵犀开发认证知识点汇总 (6).docx\",\"url\":\"lcdp-app-platform-dev/e264a62c-dead-46d6-8849-7365b8d1f8b7.docx\"}]",
+        "fileType": 3
+    },
+    {
+        "fileInfo": "[{\"fileId\":\"32216\",\"fileName\":\"灵犀开发认证知识点汇总 (3).docx\",\"url\":\"lcdp-app-platform-dev/0bf9f07c-0081-4a86-998e-55aef86e6a38.docx\"}]",
+        "fileType": 4
+    },
+    {
+        "fileInfo": "[{\"fileId\":\"32016\",\"fileName\":\"灵犀开发认证知识点汇总 (5).docx\",\"url\":\"lcdp-app-platform-dev/1c065824-bc00-43d7-920a-f86f45cf1347.docx\"}]",
+        "fileType": 5
+    },
+    {
+        "fileInfo": "[{\"fileId\":\"32115\",\"fileName\":\"灵犀开发认证知识点汇总 (3).docx\",\"url\":\"lcdp-app-platform-dev/000567c8-8709-44f8-9e69-249b07b4cb95.docx\"}]",
+        "fileType": 6
+    }
+]
+var obj = {};
+arr.map((item)=>{
+   obj[item.fileType] =JSON.parse(item.fileInfo)    
+})
+console.log(obj);

@@ -1,0 +1,26 @@
+{
+  "randomstr": 32126789,
+  "appId": "1",
+  "abilityCode": "qrySmsChannelInfo",
+  "secret": "U2FsdGVkX19vH34SUWbjy0q2gM9D7jBj",
+  "transactionId": "12019092513420010000001",
+  "timestamp": 1661823033689,
+  "token": "2efd58f67e80455ea786ec33eeca0086",
+  "body": "{\"smsHeader\":\"1\",\"ecId\":\"51034732093\"}",
+  "sign": "dd4003e946567145c5419cd3ecb396cae15a15355a0b550fcdc81edfcecf5dae"
+}
+
+0027000279
+
+0027000562
+
+0027009657
+
+QAZwsx123.
+
+
+{
+  "abilityCode": "qrySmsChannelInfo",
+  "bodyStr":"{\"smsHeader\":\"1\",\"ecId\":\"51034732093\"}",
+  "token": "2a2860afb9fd4a3f8b37549e5128c331"
+}

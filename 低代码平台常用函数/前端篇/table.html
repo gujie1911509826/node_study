@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <style>
+        
+            table{
+                border-collapse: collapse;
+            }
+            table td{
+                border:1px solid #000000;
+            }
+        </style>
+        <table>
+            <thead>
+                <tr>
+                    <td onclick="deal(1)">序号</td>
+                    <td>姓名</td>
+                    <td>年龄</td>
+                    <td>地址</td>
+                    <td>性别</td>
+                    <td  ro=>操作</td>
+                </tr>
+            </thead>
+            <!-- 给标签定义id属性和属性值,通过属性值来操作标签 -->
+            <tbody id="tb"></tbody>
+        </table>
+
+        <script>
+            var tb = document.getElementById("tb")
+               var arr = [
+                   ['张123',18,'北京','男'],
+                   ['李四',19,'上海','女'],
+                   ['王五',20,'广州','男'],
+                   ['赵六',21,'重庆','女'],
+               ];
+           
+               
+               var str = '';
+                const deal = (id)=>{
+                    alert(id);
+                }
+               // 外层循环,生成tr
+               for(var i = 0 ; i <= arr.length-1 ; i++){
+                   // 定义tr标签
+                   str += '<tr>';
+                   // 第一个单元格,内容是一维索引+1
+                   str += `<td>${i+1}</td>`;
+                   // 内层循环,生成其他td标签,内容是二维数组内容
+                   for(var j = 0 ; j <= arr[i].length-1 ; j++){
+                       str += `<td>${arr[i][j]}</td>`; 
+                   }
+                   str += `<td onclick="deal(${i+1})" style="color:blue"><a>查看详情</a></td>`
+                   str += '</tr>';
+               }
+               // 将循环生成的字符串,写入到tbody标签中
+               tb.innerHTML = str;
+           </script>
+
+
+    </body>
+</html>

@@ -77,6 +77,3 @@ const deal_some_arr = (arr) => {
 console.log(deal_some_arr(arr));
 
 
-
-
-https://lxdev.iwhalecloud.com/lcdp-app/server/app/file/download?fileId=28402&appId=877797381225484288

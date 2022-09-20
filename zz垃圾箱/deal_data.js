@@ -32,8 +32,8 @@ const arr_item = [
 ]
 const test = (value) => {
     if (value) {
-        // var arr = JSON.parse(localStorage.getItem("tree_data")) || [];
-        var arr = arr_item;
+        var arr = JSON.parse(localStorage.getItem("tree_data")) || [];
+        // var arr = arr_item;
         // 入参是 '["5221"]'  字符串的数组 处理为数组格式  ["521"]
         var arr2 = value.slice(2, value.length - 2).replace(/"/g, "").split(",") || [];
         // 定义最终的结果数组

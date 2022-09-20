@@ -1,0 +1,16 @@
+/* 修改 操作按钮样式 */
+.ued-table-wrap .ued-table-actions .ued-table-actions-antBtn {
+    height: unset;
+    color: #1890ff;
+    border: 2px solid #d9d9d9;
+    padding: 2px 6px;
+}
+
+/* 修改表格奇偶样式 */
+tr:nth-child(even) {
+    background: #ffffff;
+}
+
+tr:nth-child(odd) {
+    background: #f0f6ff;
+}
