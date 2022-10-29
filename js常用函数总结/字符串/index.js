@@ -12,4 +12,4 @@ console.log(str.lastIndexOf('w')); // 4
 console.log(str.trim()=='wqeqwda');
 
 
-1-BX2022034376
+1-BX2022034376 

@@ -27,3 +27,46 @@ const deal  =(date , curren_date)=>{
 deal("202203","202202");
 
     
+http://10.32.217.33:48642/lcdp-app/app/#/index?appId=874095373215174656
+
+http://10.32.217.33:48642/lcdp-app/app/#/test717as?appId=899849152252801024
+
+
+http://10.32.217.33:48642/lcdp-app/app/#/caidanshouye1205copy?appId=899849152252801024&
+
+http://10.32.217.33:48642/lcdp-app/app/#/test7171?appId=899849152252801024&
+
+http://10.32.217.33:48642/lcdp-app/app/#/quanwuwifi?appId=874095373215174656&
+
+{
+    "roleId": 10097,
+    "roleName": "地市管理人员"
+},
+{
+    "roleId": 10098,
+    "
+
+
+    select USER_ID, USER_NAME, USER_CODE
+from BASICC_BFM_USER
+where USER_ID not in (
+    select bbur.USER_ID
+    from BASICC_BFM_USER_ROLE bbur
+    where ROLE_ID = #{roleId}
+)
+
+
+BASICC_BFM_USER_ROLE
+
+
+BASICC_BFM_USER
+
+BASICC_BFM_ROLE
+
+
+
+
+
+
+
+select  * from BASICC_BFM_USER_ROLE bbur,BASICC_BFM_ROLE ro   where bbur.user_id = #{user_id} and bbur.role_id = ro.role_id

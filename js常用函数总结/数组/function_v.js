@@ -9,7 +9,7 @@ arr.forEach((item) => {
 
 // filter
 arr.filter((item) => item.success == false)
-console.log('过滤出所有失败的数据——是数组', arr.filter(item =>item.success == false)[0]?.success);
+console.log('过滤出所有失败的数据——是数组', arr.filter(item =>item.success == false)[0].success);
 
 // map 
 arr.map(item=>item);
@@ -24,4 +24,3 @@ console.log(arr.findIndex(item=>item.success==false));
 
 // some  every join reduce 
 arr.some((item)=>console.log('item',item))
-

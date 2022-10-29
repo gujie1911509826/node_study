@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>canvers学习</div>
+    <canvas id="tutorial" width="300" height="300">
+
+     <img src="./public/bk.png"></img>
+    </canvas>
+<script>
+function draw(){
+    var canvas = document.getElementById('tutorial');
+    if(!canvas.getContext) return;
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgb(200,0,0)";
+      //绘制矩形
+    ctx.fillRect (10, 10, 55, 50);
+ 
+    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+    ctx.fillRect (30, 30, 55, 50);
+}
+draw();
+</script>
+</body>
+</html>

@@ -1,4 +1,5 @@
-var arr = ['日','一','二','三','四','五','六']
-var week = new Date("2022-08-30").getDay();
-var str = arr[week];
-console.log(str);
+arr.forEach(item=>arr.filter(item2=>item==item2).length==1?result.push(item):'')
+return result.length>=k?result[k-1]:""
+
+var arr = [];
+arr.reduce((pre,cur)=>{arr.filter(item=>item==cur)},'')||''

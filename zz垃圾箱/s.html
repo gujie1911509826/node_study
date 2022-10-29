@@ -1,128 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>login</title>
-        <script src="query.js"></script>
-        <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-         
-        html {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            background-color: rgba(0, 0, 255, 0.5);;
-            background: url(login.jpg) no-repeat 0px 0px;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            -moz-background-size: 100% 100%;
-        }
-         
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-        }
-         .root{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-         }
-         .phone{
-            /* width: 200px; 
-            height: 30px;
-            background-color: rgba(0, 0, 0,0);
-            border:none;
-            outline:none;
-            text-decoration: none;
-            color:rgb(0, 252, 252); */
-         }
-         .inputradio{
-  margin: 20px 0;
-         }
-        #loginDiv {
-            width: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 400px;
-            background-color: rgba(24, 28, 36, 0.3);
-            box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
-            border-radius: 250px;
-        }
-         
-        
-        p {
-            margin-top: 30px;
-            margin-left: 20px;
-            color: azure;
-        }
-
-        .button {
-            border-color: cornsilk;
-            background-color: rgba(100, 149, 237, .7);
-            color: aliceblue;
-            border-style: hidden;
-            border-radius: 5px;
-            width: 100px;
-            height: 31px;
-            font-size: 16px;
-        }
-    
-        input[type="radio"] {
-           width: 20px;
-           height: 20px;
-        }
-      input[type='radio'] + label:before{
-            content: "";
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #00ffff !important;
-            border-radius: 100% !important;
-        }
-          /* 
-        input[type='radio']:checked + label:before{
-            background-color: #00ffff !important;
-
-        }
-         */
-    </style>
-    </head>
-
-    <body>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,
-            minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-
-        <div id="loginDiv">
-            <form class="root" action="123.html" id="form">
-                <h1 style="text-align: center;color: aliceblue;"></h1>
-                <span><input id="username" type="text" autocomplete="off"
-                        placeholder="手机号" name="uname" class="phone"></span>
-                <div class="inputradio">
-                    <input type="radio" name="gea" value="1" checked="checked"
-                        id="111" >
-                    <label for="111" style="font-size: 20px;color: rgb(0, 255,
-                        255);font-family:楷体;">1</label>
-                    <input type="radio" name="gea" value="2" id="222">
-                    <label for="222" style="font-size: 20px;color: rgb(0, 255,
-                        255);font-family:楷体;">2</label>
-                </div>
-                <div style="text-align: center;margin-top: 30px;">
-                    <input class="button" type="submit" onclick="judge()"
-                        value="查询" style="height: 50px;color: rgb(0, 99,
-                        99);background-color: #00ffff;">
-                </div>
-            </form>
-        </div>
-
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+</head>
+<body>
+    <!-- 上传文件 -->
+    <form method='post', action='http://192.168.20.46:8080/upload', enctype='multipart/form-data'>
+        <input type="file" name="avatar" multiple>
+	  <!-- <input type="file" id="avatar" webkitdirectory directory /> -->
+        <!-- 注意这里的name需要跟后端的avatar配置一样 -->
+        <input type="submit" value="上传">
+    </form>
+</body>
 </html>

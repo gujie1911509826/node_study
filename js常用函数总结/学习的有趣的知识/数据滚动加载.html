@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .box{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border: 5px solid red;
+    overflow-y: auto;
+  }
+  ul>li{ 
+    line-height: 30px;
+  }
+</style>
+<body>
+
+  <div class="box">
+    <ul>
+      <li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li>
+      <li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li>
+      <li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li><li>sdasd</li>
+    </ul>
+  </div>
+
+  <script>
+    let box = document.querySelector('.box')
+
+    console.log('top', box.scrollHeight);    // content+padding ----> 220 ，加了内容，设置了 overflow: auto; 之后 ----> 952
+    console.log('top', box.scrollWidth);     // content+padding ----> 220
+    /**
+     *  scrollHeight 用于获取到元素的高度，不包含边框，返回的值 content+padding 不带单位 ---> 220 ,
+     * 如果里面的内容超出了盒子的高度，将会获取到元素的真实高度，比如:
+     * 给盒子设置 height: 100px; 但是内容溢出了而且没有被隐藏，line-height: 30px; 的数据共有 10 行，那获取到的值就应该是 300
+     *  scrollWidth 获取宽度也是同样的道理
+    */
+
+    function logScroll(){
+      console.log('滚动的距离【顶部被卷去的部分】', box.scrollTop);
+      //到底部之后取消监听 , 距离底部的距离 = 元素的真实高度 - 卷去的距离 - 元素可视窗口的高度
+      let truthHeight = box.scrollHeight      //获取到元素的真实高度
+      let hiddenTop = box.scrollTop         //元素顶部被隐藏的距离[被页面卷去的高度]
+      let clientHeight = box.clientHeight   //获取到元素可视窗口的高度[关于 client 家族属性请参考上一篇文章]
+      
+      let bottomDistance = truthHeight - hiddenTop - clientHeight
+      console.log('距离底部的距离', bottomDistance);
+      //当距离底部的距离小于 200 的时候取消对滚动事件的监听
+      if(bottomDistance < 200){ 
+        box.removeEventListener('scroll', logScroll)
+      }
+    }
+
+    //监听元素的滚动事件
+    box.addEventListener('scroll', logScroll)
+
+
+  </script>
+</body>
+</html>

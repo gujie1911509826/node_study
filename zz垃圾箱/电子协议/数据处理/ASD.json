@@ -1,0 +1,135 @@
+{
+  "partyAAddr": "11111111222",
+  "partyAContact": "李平",
+  "partyAName": "重庆曹操有限公司",
+  "partyAPhone": "15803433335",
+  "fromFlag": "APP",
+  "isOp": "1",
+  "contractAccountBillInfo": {
+    "isNewAccount": "N",
+    "accountId": "2370932253225797",
+    "accountName": "互联网专线子业务201805十二圩3000-2",
+    "accountDescription": "",
+    "accountType": "业务账户",
+    "accountPaymentType": "后付费",
+    "accountStatus": "有效"
+  },
+  "contractApproval": { "approvalFlag": "N" },
+  "contractPaymentInfo": {
+    "custPhone": "13906208356",
+    "custaddress": "苏州工业园区苏虹东路155号方正智谷1幢708室",
+    "custBankAcccout": "1102151509100012997",
+    "custBankName": "中国工商银行股份有限公司苏州金门路支行",
+    "accountId": "2370932253225797",
+    "receiptBankNameType": "1",
+    "receiptBankName": "中国农业银行股份有限公司无锡永乐支行",
+    "receiptBankAcccoutType": "1_1",
+    "receiptBankAcccoutName": "中国移动通信集团江苏有限公司无锡分公司",
+    "receiptBankAcccout": "10632601040011349",
+    "custfullname": "苏州再灵物联网科技有限公司",
+    "taxpayerIdentityNumber": "91320594MA20NWWH66",
+    "invoiceType": "1",
+    "invoiceTypeDesc": "增值税专用发票",
+    "paymentCycle": "4",
+    "paymentCycleDesc": "年",
+    "paymentMethod": "1",
+    "paymentMethodDesc": "转账",
+    "paymentType": "1",
+    "paymentTypeDesc": "预付费"
+  },
+  "contractGroupCustInfo": {
+    "addr": "11111111222",
+    "aeEmail": "13813875924@139.com",
+    "aeId": "1999073",
+    "aeName": "李平",
+    "aeTel": "15803433335",
+    "attention": "2",
+    "certno": "43232342234",
+    "certtype": "43232342234",
+    "crmCustId": "1490000004715347",
+    "custCode": "51034732093",
+    "custName": "重庆曹操有限公司",
+    "customtrade": "未确定",
+    "tel": "15251847816",
+    "iscmiot": "0",
+    "corpvaluelevel": "D"
+  },
+  "contractInfoItems": [
+    {
+      "prodId": "100009",
+      "offerUuid": "pecz566ie76rxc8zuvvvwizj7gw27f1ragdr62zef87ipnezcfzw6vbnkwo4i68h",
+      "entityAttrs": [
+        { "attrNbr": "TariffInformation", "attrValue": "" },
+        {
+          "attrNbr": "billingPeriod",
+          "attrValueValue": "1",
+          "attrValueName": "年"
+        },
+        { "attrNbr": "guaranAmount_js", "attrValue": "12" },
+        { "attrNbr": "contractAmount_js", "attrValue": "12" },
+        { "attrNbr": "ywxxyxa", "attrValue": "" },
+        {
+          "attrNbr": "busiType_js",
+          "attrValueValue": "开通",
+          "attrValueName": "开通"
+        },
+        { "attrNbr": "termBusiness_js", "attrValue": "12" },
+        { "attrNbr": "autoDelay_js", "attrValue": "12" },
+        { "attrNbr": "jsContactZx", "attrValue": "121" },
+        { "attrNbr": "lxrphone", "attrValue": "15251847816" },
+        { "attrNbr": "contactAEmail_js", "attrValue": "21" },
+        { "attrNbr": "managerName", "attrValue": "李平" },
+        { "attrNbr": "jsKhjllxdh", "attrValue": "15803433335" },
+        { "attrNbr": "groupContactName", "attrValue": "2" },
+        { "attrNbr": "groupContactTel", "attrValue": "15251847816" },
+        {
+          "attrNbr": "disputeSettlement_js",
+          "attrValueValue": "1",
+          "attrValueName": "提交仲裁委员会"
+        },
+        { "attrNbr": "band_ramark", "attrValue": "" },
+        {
+          "attrNbr": "isElectronicSign",
+          "attrValueValue": "1",
+          "attrValueName": "是"
+        },
+        { "attrNbr": "ddxx", "attrValue": "" },
+        { "attrNbr": "ddbzxx" },
+        { "attrNbr": "sfdxtx", "attrValueValue": "0", "attrValueName": "否" },
+        { "attrNbr": "ddxxsfjj", "attrValueValue": "0", "attrValueName": "否" },
+        {
+          "attrNbr": "isPrintBusiAuthorize",
+          "attrValueName": "否",
+          "attrValueValue": "0"
+        }
+      ],
+      "prodInsts": [
+        {
+          "prodId": "100009",
+          "entityAttrs": [
+            {
+              "attrNbr": "look_prodType",
+              "attrValueValue": "0",
+              "attrValueName": "燃信"
+            },
+            {
+              "attrNbr": "look_prodGrade",
+              "attrValueValue": "0_0",
+              "attrValueName": "燃信0-0.5万条/年"
+            },
+            { "attrNbr": "look_price", "attrValue": "0.5" },
+            { "attrNbr": "look_priceUnit", "attrValue": "元/条" },
+            {
+              "attrNbr": "dz_effDate",
+              "attrValueValue": "0",
+              "attrValueName": "当月生效"
+            },
+            { "attrNbr": "smsTitle", "attrValue": "【荣巷太康社区工作站】" },
+            { "attrNbr": "smsPort", "attrValue": "106570031936125" }
+          ]
+        }
+      ]
+    }
+  ],
+  "otherAttachListId": [0, 0, 0, 0, 0, 0, 0]
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .root{
+          background-color: rgba(0,0,0,0.1);
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: -999999;
+        }
+        .main{
+            width: 500px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            padding: 0px 10px;
+            box-shadow: 0 0  10px rgba(0,0,0,0.3);
+            z-index: 999999;
+            pointer-events: none;
+        }
+        .head{
+            height: 40px;
+            line-height: 24px;
+            border-bottom: 1px solid gray;
+        }
+        .content{
+         padding:15px 0;
+         overflow: auto;
+         min-height:100px;
+         max-height: calc(100vh - 200px);
+         word-break: break-all;
+
+        }
+        .footer{
+            border-top: 1px solid gray;
+            line-height: 24px;
+            height: 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .button{
+         display: block;
+         background-color:blueviolet;
+         color: aliceblue;
+         font-size: 14px;
+         padding: 5px 15px;
+         border-radius: 5px;
+        
+        }
+    </style>
+    <body>
+        <div  style="pointer-events: none;" onclick="test()">12312</div>
+        <div class="root">
+            <div class="main">
+                <div class="head">
+                    <div class="top">
+                        提示
+                    </div>
+                </div>
+            <div class="content">
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 
+            李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠  李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠  李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠  李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠 李楠
+                </div>
+                <div class="footer">
+                    <div class="button">
+                        确认
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+           const test = ()=>{
+            alert(1);
+           }
+        </script>
+    </body>
+</html>

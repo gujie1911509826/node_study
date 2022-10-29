@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="test">
+            <div class="test2">woash</div>
+            <div class="test3">woash</div>
+            <div class="test4">woash</div>
+        </div>
+    </body>
+    <script>
+ var addSheet=function(styleStr){
+
+var styleElements=document.getElementsByTagName("style");
+if(styleElements.length==0){
+    if(document.createStyleSheet){
+        //说明是ie8，注意，ie8的style通过js创建的话必须使用该方法创建
+        //如果不使用该方法创建，那么通过createElement("style")方法创建的style对象在ie8下，没有对应的cssText方法
+        document.createStyleSheet();
+        //通过该方法创建，会自动添加到head中
+    }else{
+        //现代浏览器直接使用createElement
+        var styleE=document.createElement("style");
+        document.head.appendChild(styleE);
+    }
+}
+
+//styleElements是类数组，会自动更新
+var styleElement=styleElements[0];
+
+if(styleElement.styleSheet){
+    //说明ie8
+    styleElement.styleSheet.cssText+=styleStr;
+}else{
+    var textNode = document.createTextNode(styleStr);
+    styleElement.appendChild(textNode);
+}
+
+};
+function addNewStyle(newStyle) { 
+     styleElement = document.createElement("style"); 
+    styleElement.type = "text/css"; styleElement.id = "styles_js"; 
+    document.getElementsByTagName("head")[0].appendChild(styleElement); 
+  styleElement.appendChild(document.createTextNode(newStyle)); 
+} 
+addNewStyle(".test2{background:red}.test3{background:yellow");
+
+// addSheet('.test2{background:red}.test3{background:blue}')
+console.log(document.getElementsByClassName('.test'))
+</script>
+</html>

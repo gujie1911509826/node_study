@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>原生JS实现分页效果</title>
+        <style>
+            a {
+                margin: 5px;
+            }
+            .active{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: #5c6e93;
+                color: aliceblue;
+                font-weight: 500;
+                text-align: center;
+                border: 1px solid rgb(168, 162, 162);
+                border-radius: 10%;
+            }
+            .none{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                font-weight: 500;
+                text-align: center;
+                border: 1px solid rgb(168, 162, 162);
+                border-radius: 10%;
+            }
+            a{
+             text-decoration: none;
+            }
+        </style>
+    </head>
+ 
+    <body>
+        <table class="itable">
+            <tr>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>10</td>
+            </tr>
+        </table>
+        <div id="pagination"></div>
+        <script>
+            function gopage(pno, psize) {
+                let itableEl = document.querySelector(".itable");
+                let rowsNumber = itableEl.rows.length;
+                let pages = (rowsNumber / psize) > parseInt(rowsNumber / psize) ? (parseInt(rowsNumber / psize) + 1) : parseInt(rowsNumber / psize);
+                let startRow = (pno - 1) * psize + 1;
+                let endRow = pno * psize > rowsNumber ? rowsNumber : pno * psize;
+                for (let i = 1; i < itableEl.rows.length + 1; i++) {
+                    if (i >= startRow && i <= endRow) {
+                        itableEl.rows[i - 1].style.display = 'block';
+                    } else {
+                        itableEl.rows[i - 1].style.display = 'none';
+                    }
+                }
+            }
+            window.onload = function () {
+                page({
+                    // 分页条容器
+                    id: 'pagination',
+                    // 当前页面
+                    current: 1,
+                    // 总页数
+                    total: 10,
+                    // 点击页码时执行的回调函数
+                    callBack: function (now, all) {
+                        var doc = document.getElementsByClassName('pagenum');
+                     
+                        if(now>3&&now<10-2){
+                          num_cur = 2   
+                        }else{
+                            num_cur = now%5-1<0?5-1:now%5-1
+                        }
+                        console.log('日志',doc,now,num_cur);
+                        for(let i=0;i<doc.length;i++){
+                            if(i==(num_cur)){
+                             doc[i].classList.add("active");
+                             doc[i].classList.remove("none");
+                            }else{
+                            
+                            doc[i].classList.remove("active");
+                            doc[i].classList.add("none");
+                          
+                            }
+                         
+                        }
+                        console.log(now);
+                        gopage(now,3);
+                    }
+                });
+            };
+ 
+            function page(option) {
+ 
+                if (!option.id) { return false };
+ 
+                // 获取对应的容器
+                var obj = document.getElementById(option.id);
+ 
+                // 当前页
+                var current = option.current || 1;
+                // 总共多少页
+                var total = option.total || 5;
+                // 回调函数
+                var callBack = option.callBack || function () {};
+ 
+                // 显示"首页",如果当前页大于等于4，而且总页数大于等于6
+                if (current >= 4 && total >= 6) {
+                    // 创建标签 
+                    var a = document.createElement('a');
+                    // 添加链接的值
+                    a.href = '#1';
+                    // 添加内容
+                    a.innerHTML = '首页';
+                    // 添加到对象中
+                    obj.appendChild(a);
+                }
+ 
+                // 显示"上一页",如果当前页大于等于2
+                if (current >= 2) {
+                    // 创建标签 
+                    var a = document.createElement('a');
+                    // 添加链接的值
+                    a.href = '#' + (current - 1);
+                    // 添加内容
+                    a.innerHTML = '上一页';
+                    // 添加到对象中
+                    obj.appendChild(a);
+                };// 如果传入的总页数小于等于5
+                if (total <= 5) {
+                    // 循环
+                    for (var i = 1; i <= total; i++) {
+                        // 创建标签 
+                        var a = document.createElement('a');
+                        // 为每个标签赋值
+                        a.href = '#' + i;
+                        console.log('体质<5',a);
+                        a.className='pagenum'
+                        // 如果标签页为当前页
+                        if (current == i) {
+                            // 内容为i
+                            a.innerHTML = i;
+                        } else {
+                            // 内容为[i]
+                            a.innerHTML = '' + i + '';
+                        }
+                        // 将标签页添加到容器当中
+                        obj.appendChild(a);
+                    }
+                    // 如果传入的总页数大于等于5
+                } else {
+ 
+                    for (var i = 1; i <= 5; i++) {
+                        // 创建标签 
+                        var a = document.createElement('a');
+                        console.log('体质>5',a);
+                        a.className='pagenum'
+                        // 如果当前页为第1页或是第2页时（不显示第-1页和第0页）
+                        if (current == 1 || current == 2) {
+                            // 标签的链接值为#i（1,2,3,4,5）
+                            a.href = '#' + i;
+                            // 如果标签页为当前页
+                            if (current == i) {
+                                //内容为i
+                                a.innerHTML = i;
+                            } else {
+                                // 内容为[i]
+                                a.innerHTML = '' + i + '';
+                            }
+                        // 如果总页数减去当前页等于0或者等于1（不显示第11和12页）
+                        } else if ((total - current) == 0 || (total - current) == 1) {
+                            
+                            // 标签页的链接值为total - 5 + i（当前页为10，href值为#6,#7,#8,#9,#10）
+                            a.href = '#' + (total - 5 + i);
+                            a.className='pagenum'
+                            // 如果总页数减去当前页为0以及当前循环遍历的i为5
+                            if ((total - current) == 0 && i == 5) {
+                                // 标签页的内容为total - 5 + i（当前页为10，显示[6],[7],[8],[9],10）
+                                a.innerHTML = (total - 5 + i);
+ 
+                                // 如果总页数减去当前页为1以及当前循环遍历的i为4
+                            } else if ((total - current) == 1 && i == 4) {
+                                // 标签页的内容为total - 5 + i（当前页为9，显示[6],[7],[8],9,[10]）
+                                a.innerHTML = (total - 5 + i);
+                            } else {
+                                // 标签页的内容为total - 5 + i（正常显示，没有第11页和第12页）
+                                a.innerHTML = '' + (total - 5 + i) + '';
+                            }} else {
+                            // 标签页的链接值依次为当前页-3加上i（1,2,3,4,5）
+                            a.href = '#' + (current - 3 + i);
+                        
+                            // 如果当前页在5个标签页的中间
+                            if (i == 3) {
+                                // 内容为current - 3 + i
+                                a.innerHTML = (current - 3 + i);
+                            } else {
+                                // 内容为[current - 3 + i]
+                                a.innerHTML = '' + (current - 3 + i) + '';
+                            }
+                        }
+                        // 将标签页添加到容器当中
+                        obj.appendChild(a);
+                    }
+                }
+                // 显示"下一页",总页数减去当前页大于等于1，即不是最后一页
+                if ((total - current) >= 1) {
+                    // 创建标签 
+                    var a = document.createElement('a');
+                    // 给链接赋值
+                    a.href = '#' + (current + 1);
+                    // 添加内容
+                    a.innerHTML = '下一页';
+                    // 加入对象
+                    obj.appendChild(a);
+                }
+ 
+                // 显示"尾页",总页数减去当前页大于等于3时
+                if ((total - current) >= 3 && total >= 6) {
+                    // 创建标签 
+                    var a = document.createElement('a');
+                    // 给链接赋值
+                    a.href = '#' + total;
+                    // 添加内容
+                    a.innerHTML = '尾页';
+                    // 加入对象中
+                    obj.appendChild(a);
+ 
+                }
+ 
+                // 执行回调函数,传入当前页和总页数
+                callBack(current, total);
+ 
+                // 获取所有标签 
+                var pages = obj.getElementsByTagName('a');
+ 
+                // 为每个标签页添加击事件
+                for (var i = 0; i < pages.length; i++) {
+                    pages[i].onclick = function () {
+                        // 获取当前页的链接属性去#号由字符串转数字类型
+                        var current = parseInt(this.getAttribute('href').substring(1));
+                        // 清空当前的内容
+                        obj.innerHTML = '';
+ 
+                        // 配置参数
+                        page({
+                            id: option.id,
+                            total: total,
+                            current: current,
+                            callBack: callBack
+                        });
+                        // 阻止默认，防止在URL中添加字符串
+                        return false;
+ 
+                    };
+                }
+ 
+            }
+        </script>
+    </body>
+ 
+</html>

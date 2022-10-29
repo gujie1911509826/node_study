@@ -1,4 +1,4 @@
-const options: Option[] = [
+const options = [
     {
       value: 'zhejiang',
       label: 'Zhejiang',

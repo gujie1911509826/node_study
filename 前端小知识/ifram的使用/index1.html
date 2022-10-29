@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .root{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 1px solid greenyellow;
+            border-radius: 2px;
+            box-shadow: 2px 3px 4px 5px gray;
+        }
+    </style>
+    <body>
+        <div onclick="test()" class="root"> 
+            <div>10</div>
+            <div>10</div>
+            <div>10</div>
+            <div>10</div>
+
+        </div>
+<script>
+    const test = ()=>{
+        console.log('222');
+    }
+</script>
+    </body>
+</html>

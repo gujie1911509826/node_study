@@ -1,0 +1,122 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.one {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    background: #19CAAD;
+}
+
+.two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    background: #8CC7B5;
+}
+
+.three {
+    grid-row: 2 / 5;
+    grid-column: 1;
+    background: #D1BA74;
+}
+
+.four {
+    grid-column: 3;
+    grid-row: 3;
+    background: #BEE7E9;
+}
+
+.five {
+    grid-column: 2;
+    grid-row: 3/5;
+    background: #E6CEAC;
+}
+
+.six {
+    grid-column: 3;
+    grid-row: 4;
+    background: #ECAD9E;
+}
+
+.item {
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+}
+
+
+.root {
+    padding: 50px 20px;
+    display: inline-grid;
+    /*设置固定列宽为 200px 100px 200px */
+    /* grid-template-columns: 40% 20% 40%; */
+
+    /* auto-fill 关键字：表示自动填充，让一行（或者一列）中尽可能的容纳更多的单元格 */
+    /* grid-template-columns: repeat(auto-fill, 200px); */
+
+
+    /* 表示第一个列宽设置为 200px，后面剩余的宽度分为两部分，宽度分别为剩余宽度的 1/3 和 2/3 */
+    /* grid-template-columns: 200px 10fr 2fr; */
+
+    /* 三个列宽最少也是要 300px，但是最大不能大于第一第二列宽的两倍 */
+    /* grid-template-columns: 1fr 1fr minmax(300px, 2fr); */
+
+
+    /* 两边不动中间动 */
+      grid-template-columns: 200px auto 200px;
+    grid-gap: 5px;
+    background-color: rgb(94, 58, 58);
+
+    /* 每行宽度 */
+    grid-template-rows: 50px 50px;
+
+    /*  2行，而且行高都为 50px  */
+    /* grid-template-rows: repeat(2, 50px); */
+    width: 80vw;
+
+
+
+    /* grid-template-areas  grid-area 区域的概念 */
+    
+        /* grid-template-areas:
+        ". header  header"
+        "sidebar content content";
+        起名
+        用名称
+        grid-area: sidebar; */
+}
+
+
+
+
+.item1 {
+
+    background: #19CAAD;
+}
+
+.item2 {
+
+    background: #8CC7B5;
+}
+
+.item3 {
+
+    background: #D1BA74;
+}
+
+.item4 {
+
+    background: #BEE7E9;
+}
+
+.item5 {
+
+    background: #E6CEAC;
+}
+
+.item6 {
+    background: #ECAD9E;
+}

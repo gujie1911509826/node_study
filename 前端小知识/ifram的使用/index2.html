@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body{
+                position:fixed;
+            }
+           .root2{
+            display: block;
+            /* width: 100vw;
+            height: 100vh; */
+            background-color: rgb(104, 221, 26);
+            border: 1px solid greenyellow;
+            border-radius: 2px;
+            box-shadow: 2px 3px 4px 5px gray;
+            word-break: break-all;
+            max-height: calc(100vh-200px);
+            min-height: 200px;
+            overflow: auto;
+        }
+        </style>
+        <iframe
+            src="http://127.0.0.1:5500/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86/ifram%E7%9A%84%E4%BD%BF%E7%94%A8/index1.html"
+            frameborder="0">
+        </iframe>
+        <div class="root2" onclick="test()">
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+            <div>100</div>
+        </div>
+    </body>
+    <script>
+  window.onload=()=>{
+    console.log(document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('root')[0].onclick);
+
+  }
+    
+  const test = ()=>{
+    console.log('进来');
+     document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('root')[0].onclick()
+    }
+   
+   </script>
+</html>
